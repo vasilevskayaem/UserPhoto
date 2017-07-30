@@ -18,7 +18,8 @@
         <activity
             android:name="com.photo.user.userphoto.activities.PhotoActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +30,8 @@
             android:name="com.photo.user.userphoto.activities.ChangeImageActivity"
             android:label="@string/title_activity_change_image"
             android:parentActivityName="com.photo.user.userphoto.activities.PhotoActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.photo.user.userphoto.activities.PhotoActivity" />
@@ -43,7 +45,8 @@
             android:name="com.photo.user.userphoto.activities.ChooseColorActivity"
             android:label="@string/title_activity_choose_color"
             android:parentActivityName="com.photo.user.userphoto.activities.PhotoActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.photo.user.userphoto.activities.PhotoActivity" />
