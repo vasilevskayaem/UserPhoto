@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="activities.PhotoActivity"
+            android:name="com.photo.user.userphoto.activities.PhotoActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,13 +26,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="activities.ChangeImageActivity"
+            android:name="com.photo.user.userphoto.activities.ChangeImageActivity"
             android:label="@string/title_activity_change_image"
-            android:parentActivityName="activities.PhotoActivity"
+            android:parentActivityName="com.photo.user.userphoto.activities.PhotoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="activities.PhotoActivity" />
+                android:value="com.photo.user.userphoto.activities.PhotoActivity" />
         </activity>
 
         <service
@@ -40,13 +40,13 @@
             android:exported="false" />
 
         <activity
-            android:name="activities.ChooseColorActivity"
+            android:name="com.photo.user.userphoto.activities.ChooseColorActivity"
             android:label="@string/title_activity_choose_color"
-            android:parentActivityName="activities.PhotoActivity"
+            android:parentActivityName="com.photo.user.userphoto.activities.PhotoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="activities.PhotoActivity" />
+                android:value="com.photo.user.userphoto.activities.PhotoActivity" />
         </activity>
     </application>
 

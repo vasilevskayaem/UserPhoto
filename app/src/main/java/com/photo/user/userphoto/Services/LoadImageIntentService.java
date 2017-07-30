@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 
 import com.bumptech.glide.Glide;
-import activities.PhotoActivity;
+import com.photo.user.userphoto.activities.PhotoActivity;
 import com.photo.user.userphoto.settings.Settings;
 import com.photo.user.userphoto.utils.FileUtils;
 

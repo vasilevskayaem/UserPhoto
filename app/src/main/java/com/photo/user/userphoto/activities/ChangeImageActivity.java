@@ -1,4 +1,4 @@
-package activities;
+package com.photo.user.userphoto.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

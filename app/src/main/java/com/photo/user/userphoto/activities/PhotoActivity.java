@@ -1,4 +1,4 @@
-package activities;
+package com.photo.user.userphoto.activities;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
