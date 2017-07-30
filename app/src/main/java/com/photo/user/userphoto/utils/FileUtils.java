@@ -12,8 +12,6 @@ import java.io.FileOutputStream;
  */
 
 public class FileUtils {
-    public static final int REQUEST_IMAGE_CAPTURE = 1;
-
 
     public static void saveProfileImage(Bitmap bitmap, Context context){
         String filename = "profile.png";

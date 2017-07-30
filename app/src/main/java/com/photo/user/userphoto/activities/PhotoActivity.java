@@ -1,18 +1,14 @@
 package com.photo.user.userphoto.activities;
 
-import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -22,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.photo.user.userphoto.R;
@@ -39,7 +34,6 @@ import static com.photo.user.userphoto.settings.Settings.PREFS_NAME;
 public class PhotoActivity extends AppCompatActivity {
     public static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String BROADCAST_RECIEVER_LOADING_STATUS = "status";
-    static final int REQUEST_INTERNET = 456;
     public static final String LOADING_STATUS_OK = "ok";
     public static final String LOADING_STATUS_ERROR = "error";
     private SharedPreferences prefs;
@@ -62,17 +56,8 @@ public class PhotoActivity extends AppCompatActivity {
         editPhotoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(PhotoActivity.this,
-                        Manifest.permission.INTERNET)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    //not checked on real device
-                    Intent intent = new Intent(PhotoActivity.this, ChangeImageActivity.class);
-                    startActivity(intent);
-                } else {
-                    ActivityCompat.requestPermissions(PhotoActivity.this,
-                            new String[]{Manifest.permission.INTERNET}, REQUEST_INTERNET);
-                }
-
+                Intent intent = new Intent(PhotoActivity.this, ChangeImageActivity.class);
+                startActivity(intent);
             }
         });
         if (Settings.isLoadingInProcess(prefs)) {
@@ -177,23 +162,6 @@ public class PhotoActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             profileImage.setImageBitmap(imageBitmap);
             FileUtils.saveProfileImage(imageBitmap, getApplicationContext());
-        }
-    }
-
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_INTERNET: {
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Intent intent = new Intent(PhotoActivity.this, ChangeImageActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(this, "Grant internet permission to load image by url."
-                            , Toast.LENGTH_LONG).show();
-                }
-                return;
-            }
         }
     }
 }

@@ -16,7 +16,6 @@ import static com.photo.user.userphoto.settings.Settings.PREFS_NAME;
 
 
 public class ChangeImageActivity extends AppCompatActivity {
-    public static final String DATA = "data";
     private TextView imageUrlTextView;
     private Button loadImageButton;
 
@@ -33,7 +32,7 @@ public class ChangeImageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String urlString = imageUrlTextView.getText().toString();
                 if (urlString.length() == 0) {
-                    imageUrlTextView.setError("Please enter image Url befare loading");
+                    imageUrlTextView.setError(getString(R.string.empty_url_message));
                 } else {
                     Settings.setLoadingInProcess(getSharedPreferences(PREFS_NAME,MODE_PRIVATE),true);
                     Intent intent = new Intent(ChangeImageActivity.this, LoadImageIntentService.class);

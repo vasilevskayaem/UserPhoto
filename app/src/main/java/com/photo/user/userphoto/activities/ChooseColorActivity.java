@@ -16,6 +16,7 @@ import static com.photo.user.userphoto.settings.Settings.PREFS_NAME;
 public class ChooseColorActivity extends AppCompatActivity {
     private Button saveColorButton;
     private Button clearColorButton;
+    private static final int DEFAULT_COLOR = Color.parseColor("#55ffffff");
     ColorPickerView colorPickerView;
 
     @Override
@@ -34,7 +35,7 @@ public class ChooseColorActivity extends AppCompatActivity {
             colorPickerView.setInitialColor(color,false);
         }
         else{
-            colorPickerView.setInitialColor(Color.parseColor("#55ffffff"),false);
+            colorPickerView.setInitialColor(DEFAULT_COLOR,false);
         }
         saveColorButton.setOnClickListener(new View.OnClickListener() {
             @Override

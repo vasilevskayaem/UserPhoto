@@ -9,4 +9,5 @@
     <string name="image_loading_error">Image can\'t be loaded,
         please check internet connection and image url.</string>
     <string name="saving_photo_error">Saving photo failure, please try one more time.</string>
+    <string name="empty_url_message">Please enter image Url befare loading</string>
 </resources>
