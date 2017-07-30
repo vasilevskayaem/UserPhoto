@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_view_height">40dp</dimen>
+    <dimen name="text_view_margin">40dp</dimen>
+    <dimen name="small_padding">10dp</dimen>
+    <dimen name="margin_between_buttons">50dp</dimen>
+    <dimen name="profile_height">200dp</dimen>
+</resources>

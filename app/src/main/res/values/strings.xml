@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Profile photo</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_change_image">Change profile photo</string>
+    <string name="load_image_from_url">Load image from URL</string>
+    <string name="title_activity_choose_color">ChooseColorActivity</string>
+    <string name="save_color_btn_text">Save color</string>
+    <string name="clear_color_btn_text">Clear color</string>
+    <string name="image_loading_error">Image can\'t be loaded,
+        please check internet connection and image url.</string>
+    <string name="saving_photo_error">Saving photo failure, please try one more time.</string>
+</resources>
